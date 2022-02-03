@@ -45,8 +45,7 @@ export class UserService {
     try {
       const userExists = await this.findUserByEmail(data.email);
       exists = !!userExists;
-      // eslint-disable-next-line prettier/prettier
-    } catch (err) { }
+    } catch (err) {}
     if (exists) {
       throw new BadRequestException(
         `the user with email:${data.email} already exists`,

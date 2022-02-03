@@ -97,7 +97,7 @@ describe('UserService', () => {
         .catch((err) => {
           expect(err).toBeInstanceOf(InternalServerErrorException);
           expect(err).toMatchObject({
-            message: `Failed to create user`,
+            message: 'failed to create user',
           });
         });
     });
